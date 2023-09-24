@@ -16,10 +16,21 @@ COPY . .
 RUN HUSKY_SKIP_INSTALL=true npm i --quiet --legacy-peer-deps && npm run build
 
 
+FROM node:16.13-alpine3.15 as run
+
+
+WORKDIR /usr/app
+
+COPY --from=build /usr/app/package*.json ./
+COPY --from=build /usr/app/dist/ ./dist
+
+
+RUN npm ci --only=prod --legacy-peer-deps --quiet
+
+RUN ls
+
 EXPOSE 3000
 
-
-# Running the app
 CMD [ "npm", "run","ts:start" ]
 
 HEALTHCHECK NONE
