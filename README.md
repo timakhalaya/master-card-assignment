@@ -8,3 +8,5 @@ PART 2:
 - run `npm run ts:dev` in order to start the service
 - starting the service in Docker container `docker build --env-file='.env'`
 - starting the container `docker run -dt --env-file=./.env -P {imageName}`
+
+- Postman collection for a test located on the root level of assignment :) 
