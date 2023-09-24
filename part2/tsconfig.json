@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "noImplicitOverride": true,
+      "noImplicitReturns": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "removeComments": true,
+      "sourceMap": true,
+      "noEmit": false,
+      "strict": true,
+      "allowJs": true,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "ES2021",
+      "moduleResolution": "node",
+      "noImplicitAny": false,
+      "skipLibCheck": true,
+      "isolatedModules": true,
+      "outDir": "./dist",
+      "rootDir": "./",
+      "baseUrl": "./",
+      "paths": {
+      }
+    },
+    "ts-node": {
+      "files": true
+    },
+    "include": ["./**/*.ts", "./*.d.ts"],
+    "lib": ["es2015"]
+  }
