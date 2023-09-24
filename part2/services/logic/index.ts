@@ -1,16 +1,14 @@
-import multer from "multer";
+const INVALID_MESSAGE = 'Invalid string provided for a check';
+type closeChars = '}' | ']' | '>' | ')'
 
 /**
 Function does the processing of chunks (paranthesis)
 characters - string
  */
-type closeChars = '}' | ']' | '>' | ')'
 
 const validateOnlyLetterAndNumbers = (testString: string): boolean =>{
     return /[A-Za-z0-9]/g.test(testString)
 }
-
-const INVALID_MESSAGE = 'Invalid string provided for a check'
 
 export const processValidCharacters = (characters: string)=>{
     if(!characters){
@@ -55,16 +53,3 @@ export const processValidCharacters = (characters: string)=>{
     }
     return invalidIndex;
 }
-
-// Set up storage for uploaded files
-const storage = multer.diskStorage({
-  destination: (_req, _file, cb) => {
-    cb(null, '.');
-  },
-  filename: (_req, file, cb) => {
-    cb(null, file.originalname);
-  }
-});
-
-// Create the multer instance
-export const upload = multer({ storage: storage });

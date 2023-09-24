@@ -25,6 +25,6 @@
     "ts-node": {
       "files": true
     },
-    "include": ["./**/*.ts", "./*.d.ts"],
+    "include": ["./**/*.ts", ".services/**/*.ts","./*.d.ts"],
     "lib": ["es2015"]
   }
