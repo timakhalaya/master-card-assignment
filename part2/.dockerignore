@@ -1,0 +1,14 @@
+# IDE
+.vscode
+
+#Git
+.git
+.gitignore
+
+# JS
+node_modules
+dist
+.huskyrc*
+.lintstagedrc*
+.nvmrc*
+.helm
